@@ -1,0 +1,58 @@
+<div class="page-header">
+	<h2>Your Links <small>You have {{length}} bookmarks</small></h2>
+</div>
+
+<div class="row">
+
+	<div class="span12">
+
+		<p class="pull-left"># {{length}} bookmark(s) <span class="muted">({{favorites.length}} starred)</span></p>
+		
+		{{view Bootstrap.Pills classNames="pull-right" contentBinding="sortNavProperties" selectionBinding="sortNavSelection"}}
+		<div class="muted pull-right" style="padding:6px;">
+			<i {{bindAttr class='sortAscending:icon-arrow-down:icon-arrow-up'}}></i> Sort by:
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th {{action 'reSort' 'insertAt'}}>Date</th>
+					<th {{action 'reSort' 'title'}}>Title</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each }}
+				<tr {{bindAttr class='favorite:warning'}}>
+					<td><small><em class="muted">added {{timeago insertedAt}}</em></small></td>
+					<td>
+						<i {{bindAttr class='favorite:icon-star:icon-star-empty'}} {{action 'toggleFavorite' this}}></i> 
+						<strong><a target="_blank" {{bindAttr href='url'}}>{{title}}</a></strong> • <span class="muted">{{shorturl url}}</span><br>
+						<small class="muted">{{description}}</small>
+					</td>
+					<td>
+						<div class="btn-group pull-right">
+							<button class="btn btn-mini" {{action 'editItem' this}}>Edit</button>
+							<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#" {{action 'editItem' this}}><i class="icon-pencil"></i> Edit</a></li>
+								<li><a href="#" {{action 'toggleFavorite' this}}><i class="icon-star"></i> {{#if favorite}}Remove from {{else}}Add to{{/if}} favorites</a></li>
+								<li class="divider"></li>
+								<li><a href="#" {{action 'removeItem' this}}><i class="icon-trash"></i> Delete</a></li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				{{else}}
+				<tr>
+					<td colspan="3">No bookmark yet!</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+
+		<button class="btn btn-primary" {{action 'createItem'}}>Add a link</button>
+
+	</div>
+
+</div>

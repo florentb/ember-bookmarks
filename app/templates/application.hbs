@@ -1,0 +1,21 @@
+<div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				{{#linkTo "index" classNames="brand"}}Ember Bookmarks{{/linkTo}}
+				<ul class="nav">
+					{{#view App.NavbarItemView}}
+						{{#linkTo "bookmarks"}}Links{{/linkTo}}
+					{{/view}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="main">
+		<div class="row">
+			{{outlet}}
+		</div>
+	</div>
+</div>
+
+{{outlet modal}}
