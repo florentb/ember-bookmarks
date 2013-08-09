@@ -2,7 +2,7 @@
 
 The goal of this project is to mimic popular bookmarks managers as Google Bookmarks or Delicious.
 
-	> This app as an **experimentation playground** designed to practice **Ember.js framework** and see how it integrates with other web components.
+> This app as an **experimentation playground** designed to practice **Ember.js framework** and see how it integrates with other web components.
 
 ## Quick start
 
