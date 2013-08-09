@@ -14,11 +14,14 @@
     "strict": false,
     "trailing": true,
     "smarttabs": true,
+    "scripturl": true,
     "jquery": true,
     "globals": {
         "Ember": true,
+        "Handlebars": true,
         "App": true,
         "DS": true,
-        "moment": true
+        "moment": true,
+        "Showdown": true
     }
 }

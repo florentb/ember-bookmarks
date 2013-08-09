@@ -47,6 +47,6 @@ App.BookmarksController = Ember.ArrayController.extend({
 
 	regular: function() {
 		return this.filterProperty('favorite', false);
-	}.property('@each.favorite'),
+	}.property('@each.favorite')
 
 });
