@@ -6,7 +6,7 @@ The goal of this project is to mimic popular bookmarks managers as Google Bookma
 
 ## Quick start
 
-As **[Ember.js Generator](https://github.com/yeoman/generator-ember)** is used for the workflow, make sure [**Yeoman**](http://yeoman.io/) is installed (witch means you also have installed Node.js, Git, Ruby and Compass).
+As **[Ember.js Generator](https://github.com/yeoman/generator-ember)** is used for the workflow, make sure [**Yeoman**](http://yeoman.io/) is installed (which means you also have installed Node.js, Git, Ruby and Compass).
 
 *   Clone the repo: `git clone git://github.com/florentb/ember-bookmarks`
 *   Install NPM modules: `npm install`
